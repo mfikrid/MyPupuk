@@ -151,10 +151,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(jPasswordField1.getText().equals(Register.password)&&(jPasswordField1.getText().equals(Register.username))){
             Home hm = new Home();
-        hm.setVisible(true);
-        hm.pack();
-        hm.setLocationRelativeTo(null);
-        hm.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+            hm.setVisible(true);
+            hm.pack();
+            hm.setLocationRelativeTo(null);
+            hm.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
             
         }else{
             jLabel5.setText("maaf kata sandi salah");
