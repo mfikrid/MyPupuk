@@ -5,20 +5,40 @@
  */
 package Mypupuk;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import java.sql.Statement;
+
 /**
  *
  * @author aditya anugrah
  */
 public class Register extends javax.swing.JFrame {
+    
+    Connection con = null;
+    Statement st= null;
+    PreparedStatement pat = null;
+    ResultSet rs = null;
+    Object set;
 
-    /**
-     * Creates new form Register
-     */
+    
     public static String name;
     public static String username;
     public static String password;
     public Register() {
+        this.con = null;
         initComponents();
+    }
+    public void hapuslayar(){
+        txtname.setText("");
+        txtusername.setText("");
+        txtpassword.setText("");
+        txtkonpassword.setText("");
     }
 
     /**
@@ -37,14 +57,16 @@ public class Register extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtname = new javax.swing.JFormattedTextField();
+        txtusername = new javax.swing.JFormattedTextField();
+        txtpassword = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        txtkonpassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,7 +89,7 @@ public class Register extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 1624, Short.MAX_VALUE)
+                .addGap(0, 1584, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -76,7 +98,7 @@ public class Register extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(40, 0, 1670, 50);
+        jPanel1.setBounds(40, 0, 1630, 50);
 
         jPanel2.setBackground(new java.awt.Color(139, 218, 57));
         jPanel2.setPreferredSize(new java.awt.Dimension(1150, 820));
@@ -101,16 +123,23 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Password");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 530, -1, -1));
-        jPanel2.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, 233, -1));
-        jPanel2.add(jFormattedTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 490, 233, -1));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 530, 233, -1));
+        jPanel2.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, 233, -1));
+
+        txtusername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusernameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 490, 233, -1));
+        jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 530, 233, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Ref.Password");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 570, -1, -1));
-        jPanel2.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 570, 233, -1));
+        jPanel2.add(txtkonpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 570, 233, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 255));
         jButton1.setText("Register");
@@ -119,41 +148,63 @@ public class Register extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 750, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 680, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 0, 51));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 660, 752, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 620, 752, 30));
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pg.png"))); // NOI18N
         jPanel2.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 610, 290));
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 0, 255));
+        jButton2.setText("Login");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 750, 90, -1));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Or");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 720, 20, -1));
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cewe3.jpg"))); // NOI18N
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(40, 50, 1670, 1000);
+        jPanel2.setBounds(40, 50, 1630, 1000);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(jPasswordField1.getText().equals(jPasswordField1.getText())){
-            name = jPasswordField1.getText();
-            username = jPasswordField1.getText();
-            password = jPasswordField1.getText();
+        try{
+            if(txtusername.getText().equals("")|| txtpassword.getPassword().equals("")||
+                    txtname.getText().equals("")){
+                JOptionPane.showMessageDialog(this,"Data tidak boleh kosong","pesan",JOptionPane.ERROR_MESSAGE);
+                hapuslayar();
+            }else{
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/mypupuk","root","");
+                st = con.createStatement();
+                String simpan = "INSERT INTO user VALUES('"+txtusername.getText()+"','"+String.valueOf(txtpassword.getPassword())+"','"+txtname.getText()+"')";
+                st = con.createStatement();
+                int SA = st.executeUpdate(simpan);
+                JOptionPane.showMessageDialog(this,"register berhasil");
+                this.setVisible(false);
+                new Login().setVisible(true);
+                
+            }
+        }catch (HeadlessException | ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(this,"Akun sudah ada","pesan",JOptionPane.WARNING_MESSAGE);
             
-            Login lg = new Login();
-            lg.setVisible(true);
-            lg.pack();
-            lg.setLocationRelativeTo(null);
-            lg.setDefaultCloseOperation(Register.EXIT_ON_CLOSE);
             
-            
-        }else{jLabel7.setText("maaf kata sandi salah");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -161,6 +212,16 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,8 +260,7 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -208,11 +268,14 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JLabel logo;
+    private javax.swing.JPasswordField txtkonpassword;
+    private javax.swing.JFormattedTextField txtname;
+    private javax.swing.JPasswordField txtpassword;
+    private javax.swing.JFormattedTextField txtusername;
     // End of variables declaration//GEN-END:variables
 }
