@@ -78,7 +78,7 @@ public class Awalan extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addComponent(jLabel1))
                     .addGroup(frame1Layout.createSequentialGroup()
-                        .addGap(299, 299, 299)
+                        .addGap(305, 305, 305)
                         .addComponent(jButton1)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
@@ -87,9 +87,9 @@ public class Awalan extends javax.swing.JFrame {
             .addGroup(frame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(45, 45, 45)
+                .addGap(26, 26, 26)
                 .addComponent(jButton1)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
 
         Awal.add(frame1, "card2");
@@ -108,16 +108,16 @@ public class Awalan extends javax.swing.JFrame {
         frame2Layout.setHorizontalGroup(
             frame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frame2Layout.createSequentialGroup()
-                .addGap(301, 301, 301)
+                .addGap(308, 308, 308)
                 .addComponent(jButton2)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(336, Short.MAX_VALUE))
         );
         frame2Layout.setVerticalGroup(
             frame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frame2Layout.createSequentialGroup()
-                .addContainerGap(663, Short.MAX_VALUE)
+                .addContainerGap(642, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(249, 249, 249))
+                .addGap(270, 270, 270))
         );
 
         Awal.add(frame2, "card3");
@@ -136,16 +136,16 @@ public class Awalan extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(294, 294, 294)
+                .addGap(305, 305, 305)
                 .addComponent(jButton3)
-                .addContainerGap(344, Short.MAX_VALUE))
+                .addContainerGap(333, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(667, Short.MAX_VALUE)
+                .addContainerGap(641, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addGap(245, 245, 245))
+                .addGap(271, 271, 271))
         );
 
         Awal.add(jPanel1, "card4");
