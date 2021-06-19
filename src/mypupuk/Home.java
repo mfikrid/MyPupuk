@@ -55,9 +55,6 @@ public class Home extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         Tengah = new javax.swing.JPanel();
-        tampilangalery = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         about = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,6 +62,12 @@ public class Home extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         tampilanhome = new javax.swing.JLabel();
+        tampilangalery = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         Home = new javax.swing.JButton();
         Galery = new javax.swing.JButton();
@@ -82,20 +85,6 @@ public class Home extends javax.swing.JFrame {
         Tengah.setBackground(new java.awt.Color(0, 204, 0));
         Tengah.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         Tengah.setLayout(new java.awt.CardLayout());
-
-        tampilangalery.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Pertanian");
-        jLabel1.setToolTipText("");
-        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, 43));
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pg.png"))); // NOI18N
-        tampilangalery.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
-
-        Tengah.add(tampilangalery, "card3");
 
         about.setBackground(new java.awt.Color(139, 218, 57));
 
@@ -152,6 +141,32 @@ public class Home extends javax.swing.JFrame {
 
         tampilanhome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pg.png"))); // NOI18N
         Tengah.add(tampilanhome, "card2");
+
+        tampilangalery.setBackground(new java.awt.Color(0, 0, 0));
+        tampilangalery.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Berbagai macam Pupuk Organik");
+        jLabel1.setToolTipText("");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, 50));
+
+        jButton3.setText("Baca Selengkapnya");
+        tampilangalery.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pk.jpg"))); // NOI18N
+        tampilangalery.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 340, 340));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Pupuk Organik adalah pupuk yang tersusun");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        tampilangalery.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 310, 300));
+
+        Tengah.add(tampilangalery, "card3");
 
         jPanel3.add(Tengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 700, 880));
 
@@ -331,15 +346,18 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel about;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel tampilangalery;
     private javax.swing.JLabel tampilanhome;
     private javax.swing.JButton tentang;
