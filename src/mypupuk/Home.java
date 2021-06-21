@@ -55,19 +55,21 @@ public class Home extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         Tengah = new javax.swing.JPanel();
+        tampilangalery = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         about = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        tampilanhome = new javax.swing.JLabel();
-        tampilangalery = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        tampilanlerry = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         Home = new javax.swing.JButton();
         Galery = new javax.swing.JButton();
@@ -85,6 +87,47 @@ public class Home extends javax.swing.JFrame {
         Tengah.setBackground(new java.awt.Color(0, 204, 0));
         Tengah.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         Tengah.setLayout(new java.awt.CardLayout());
+
+        tampilangalery.setBackground(new java.awt.Color(0, 0, 0));
+        tampilangalery.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton3.setText("Baca Selengkapnya");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        tampilangalery.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pupukku.jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 430, 210));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/homepupuk'.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        tampilangalery.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 280, 160));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/orvsanor.jpeg"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        tampilangalery.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 410, 240));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/oranor.jpeg"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        tampilangalery.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 240, 120));
+
+        jButton4.setText("Baca Selengkapnya");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        tampilangalery.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/www.mypupuk.com.jpeg"))); // NOI18N
+        jLabel11.setText("jLabel11");
+        tampilangalery.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 770, 390, 100));
+
+        Tengah.add(tampilangalery, "card3");
 
         about.setBackground(new java.awt.Color(139, 218, 57));
 
@@ -139,34 +182,18 @@ public class Home extends javax.swing.JFrame {
 
         Tengah.add(about, "card4");
 
-        tampilanhome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pg.png"))); // NOI18N
-        Tengah.add(tampilanhome, "card2");
+        javax.swing.GroupLayout tampilanlerryLayout = new javax.swing.GroupLayout(tampilanlerry);
+        tampilanlerry.setLayout(tampilanlerryLayout);
+        tampilanlerryLayout.setHorizontalGroup(
+            tampilanlerryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 694, Short.MAX_VALUE)
+        );
+        tampilanlerryLayout.setVerticalGroup(
+            tampilanlerryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 874, Short.MAX_VALUE)
+        );
 
-        tampilangalery.setBackground(new java.awt.Color(0, 0, 0));
-        tampilangalery.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Berbagai macam Pupuk Organik");
-        jLabel1.setToolTipText("");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, 50));
-
-        jButton3.setText("Baca Selengkapnya");
-        tampilangalery.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pk.jpg"))); // NOI18N
-        tampilangalery.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 340, 340));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Pupuk Organik adalah pupuk yang tersusun");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        tampilangalery.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 310, 300));
-
-        Tengah.add(tampilangalery, "card3");
+        Tengah.add(tampilanlerry, "card5");
 
         jPanel3.add(Tengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 700, 880));
 
@@ -280,7 +307,7 @@ public class Home extends javax.swing.JFrame {
         Tengah.repaint();
         Tengah.revalidate();
 
-        Tengah.add(tampilangalery);
+        Tengah.add(tampilanlerry);
         Tengah.repaint();
         Tengah.revalidate();
     }//GEN-LAST:event_GaleryActionPerformed
@@ -291,7 +318,7 @@ public class Home extends javax.swing.JFrame {
         Tengah.repaint();
         Tengah.revalidate();
 
-        Tengah.add(tampilanhome);
+        Tengah.add(tampilangalery);
         Tengah.repaint();
         Tengah.revalidate();
 
@@ -303,6 +330,19 @@ public class Home extends javax.swing.JFrame {
         new FromBarang().setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new mypupuk.Pupukorganik2().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new mypupuk.Pupukorganik().setVisible(true);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -347,19 +387,21 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel tampilangalery;
-    private javax.swing.JLabel tampilanhome;
+    private javax.swing.JPanel tampilanlerry;
     private javax.swing.JButton tentang;
     // End of variables declaration//GEN-END:variables
 }
