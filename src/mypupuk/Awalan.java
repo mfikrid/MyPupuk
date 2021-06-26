@@ -45,21 +45,23 @@ public class Awalan extends javax.swing.JFrame {
 
         Awal = new javax.swing.JPanel();
         frame1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         frame2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Awal.setPreferredSize(new java.awt.Dimension(750, 1108));
         Awal.setLayout(new java.awt.CardLayout());
 
-        frame1.setBackground(new java.awt.Color(139, 218, 57));
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pg.png"))); // NOI18N
+        frame1.setBackground(new java.awt.Color(80, 102, 77));
+        frame1.setPreferredSize(new java.awt.Dimension(701, 937));
+        frame1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,34 +69,16 @@ public class Awalan extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        frame1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 660, 60, 30));
 
-        javax.swing.GroupLayout frame1Layout = new javax.swing.GroupLayout(frame1);
-        frame1.setLayout(frame1Layout);
-        frame1Layout.setHorizontalGroup(
-            frame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frame1Layout.createSequentialGroup()
-                .addGroup(frame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(frame1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1))
-                    .addGroup(frame1Layout.createSequentialGroup()
-                        .addGap(305, 305, 305)
-                        .addComponent(jButton1)))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-        frame1Layout.setVerticalGroup(
-            frame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frame1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(26, 26, 26)
-                .addComponent(jButton1)
-                .addContainerGap(273, Short.MAX_VALUE))
-        );
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.jpg"))); // NOI18N
+        frame1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 400, 450));
 
         Awal.add(frame1, "card2");
 
-        frame2.setBackground(new java.awt.Color(139, 218, 57));
+        frame2.setBackground(new java.awt.Color(80, 102, 77));
+        frame2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -102,27 +86,16 @@ public class Awalan extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        frame2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 730, 70, 40));
 
-        javax.swing.GroupLayout frame2Layout = new javax.swing.GroupLayout(frame2);
-        frame2.setLayout(frame2Layout);
-        frame2Layout.setHorizontalGroup(
-            frame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frame2Layout.createSequentialGroup()
-                .addGap(308, 308, 308)
-                .addComponent(jButton2)
-                .addContainerGap(336, Short.MAX_VALUE))
-        );
-        frame2Layout.setVerticalGroup(
-            frame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frame2Layout.createSequentialGroup()
-                .addContainerGap(642, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(270, 270, 270))
-        );
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/frame2.png"))); // NOI18N
+        frame2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 940));
 
         Awal.add(frame2, "card3");
 
-        jPanel1.setBackground(new java.awt.Color(139, 218, 57));
+        jPanel1.setBackground(new java.awt.Color(80, 102, 77));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setText("Mulai");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -130,23 +103,11 @@ public class Awalan extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 640, 80, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(305, 305, 305)
-                .addComponent(jButton3)
-                .addContainerGap(333, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(641, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(271, 271, 271))
-        );
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/frame3.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 940));
 
         Awal.add(jPanel1, "card4");
 
@@ -158,7 +119,7 @@ public class Awalan extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Awal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Awal, javax.swing.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE)
         );
 
         pack();
@@ -236,6 +197,8 @@ public class Awalan extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

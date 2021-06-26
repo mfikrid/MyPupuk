@@ -57,12 +57,13 @@ public class Home extends javax.swing.JFrame {
         Tengah = new javax.swing.JPanel();
         tampilangalery = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         about = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -70,6 +71,7 @@ public class Home extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         tampilanlerry = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Home = new javax.swing.JButton();
         Galery = new javax.swing.JButton();
@@ -80,15 +82,15 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(139, 218, 57));
+        jPanel3.setBackground(new java.awt.Color(80, 102, 77));
         jPanel3.setPreferredSize(new java.awt.Dimension(1150, 820));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Tengah.setBackground(new java.awt.Color(0, 204, 0));
+        Tengah.setBackground(new java.awt.Color(80, 102, 77));
         Tengah.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         Tengah.setLayout(new java.awt.CardLayout());
 
-        tampilangalery.setBackground(new java.awt.Color(0, 0, 0));
+        tampilangalery.setBackground(new java.awt.Color(80, 102, 77));
         tampilangalery.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setText("Baca Selengkapnya");
@@ -97,35 +99,76 @@ public class Home extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        tampilangalery.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
+        tampilangalery.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 800, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pupukku.jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 430, 210));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/oranor.png"))); // NOI18N
+        tampilangalery.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 710, 330, 120));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/homepupuk'.jpeg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        tampilangalery.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 280, 160));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/orvsanor.jpeg"))); // NOI18N
-        jLabel8.setText("jLabel8");
-        tampilangalery.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 410, 240));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/oranor.jpeg"))); // NOI18N
-        jLabel9.setText("jLabel9");
-        tampilangalery.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 240, 120));
-
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Baca Selengkapnya");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        tampilangalery.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        tampilangalery.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/www.mypupuk.com.jpeg"))); // NOI18N
-        jLabel11.setText("jLabel11");
-        tampilangalery.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 770, 390, 100));
+        jPanel6.setBackground(new java.awt.Color(102, 51, 0));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        tampilangalery.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, -1, -1));
+
+        jPanel4.setBackground(new java.awt.Color(102, 51, 0));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 880, Short.MAX_VALUE)
+        );
+
+        tampilangalery.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, 880));
+
+        jPanel7.setBackground(new java.awt.Color(102, 51, 0));
+
+        jLabel10.setBackground(new java.awt.Color(102, 51, 0));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/homepupuk.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 350, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tampilangalery.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 100));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.jpg"))); // NOI18N
+        tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 410, 420));
 
         Tengah.add(tampilangalery, "card3");
 
@@ -162,7 +205,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7))))
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
         aboutLayout.setVerticalGroup(
             aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,27 +220,23 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(524, Short.MAX_VALUE))
         );
 
         Tengah.add(about, "card4");
 
-        javax.swing.GroupLayout tampilanlerryLayout = new javax.swing.GroupLayout(tampilanlerry);
-        tampilanlerry.setLayout(tampilanlerryLayout);
-        tampilanlerryLayout.setHorizontalGroup(
-            tampilanlerryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 694, Short.MAX_VALUE)
-        );
-        tampilanlerryLayout.setVerticalGroup(
-            tampilanlerryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 874, Short.MAX_VALUE)
-        );
+        tampilanlerry.setBackground(new java.awt.Color(80, 102, 77));
+        tampilanlerry.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/galery.jpg"))); // NOI18N
+        tampilanlerry.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 650, 830));
 
         Tengah.add(tampilanlerry, "card5");
 
         jPanel3.add(Tengah, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 700, 880));
 
-        jPanel2.setBackground(new java.awt.Color(139, 218, 57));
+        jPanel2.setBackground(new java.awt.Color(80, 102, 77));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel2.setDebugGraphicsOptions(javax.swing.DebugGraphics.FLASH_OPTION);
 
@@ -389,17 +428,19 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel tampilangalery;
     private javax.swing.JPanel tampilanlerry;
     private javax.swing.JButton tentang;

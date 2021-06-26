@@ -84,7 +84,7 @@ public class Register extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(139, 218, 57));
+        jPanel2.setBackground(new java.awt.Color(80, 102, 77));
         jPanel2.setPreferredSize(new java.awt.Dimension(1150, 820));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
