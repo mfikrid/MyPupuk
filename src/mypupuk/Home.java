@@ -64,12 +64,6 @@ public class Home extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        about = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         tampilanlerry = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -171,59 +165,6 @@ public class Home extends javax.swing.JFrame {
         tampilangalery.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 410, 420));
 
         Tengah.add(tampilangalery, "card3");
-
-        about.setBackground(new java.awt.Color(139, 218, 57));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Delevop By :");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Aditya Anugrah (A11.2019.12010)");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("M Fikri Ridwan (A11.2019.11976)");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("Reinaldy Akbar Febriansyah (A11.2019.11979)");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("Rafif Rakha Widyadhana(A11.2019.11992)");
-
-        javax.swing.GroupLayout aboutLayout = new javax.swing.GroupLayout(about);
-        about.setLayout(aboutLayout);
-        aboutLayout.setHorizontalGroup(
-            aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(aboutLayout.createSequentialGroup()
-                .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(aboutLayout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(jLabel3))
-                    .addGroup(aboutLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addGroup(aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))))
-                .addContainerGap(247, Short.MAX_VALUE))
-        );
-        aboutLayout.setVerticalGroup(
-            aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(aboutLayout.createSequentialGroup()
-                .addGap(220, 220, 220)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addContainerGap(524, Short.MAX_VALUE))
-        );
-
-        Tengah.add(about, "card4");
 
         tampilanlerry.setBackground(new java.awt.Color(80, 102, 77));
         tampilanlerry.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -330,13 +271,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tentangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tentangActionPerformed
-        Tengah.removeAll();
-        Tengah.repaint();
-        Tengah.revalidate();
-
-        Tengah.add(about);
-        Tengah.repaint();
-        Tengah.revalidate();
+        this.setVisible(false);
+        new mypupuk.About().setVisible(true);
 
     }//GEN-LAST:event_tentangActionPerformed
 
@@ -422,7 +358,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton Galery;
     private javax.swing.JButton Home;
     private javax.swing.JPanel Tengah;
-    private javax.swing.JPanel about;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -430,11 +365,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

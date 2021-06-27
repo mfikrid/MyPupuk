@@ -5,6 +5,9 @@
  */
 package mypupuk;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author aditya anugrah
@@ -16,6 +19,20 @@ public class Pupukorganik extends javax.swing.JFrame {
      */
     public Pupukorganik() {
         initComponents();
+        Dimension screenSize = 
+         Toolkit.getDefaultToolkit().getScreenSize();
+            Dimension frameSize = this.getSize();
+            if (frameSize.height > screenSize.height) {
+                frameSize.height = screenSize.height;
+            }
+            if (frameSize.width > screenSize.width) {
+                frameSize.width = screenSize.width;
+            }
+            this.setLocation(
+                    (screenSize.width - frameSize.width) / 2, 
+                    (screenSize.height - frameSize.height) / 2);
+        
+        
     }
 
     /**
@@ -70,6 +87,8 @@ public class Pupukorganik extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new Mypupuk.Home().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
